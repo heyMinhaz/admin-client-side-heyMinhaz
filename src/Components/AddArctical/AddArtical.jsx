@@ -4,19 +4,17 @@
 
 import Navbar from "../Navbar/Navbar";
 
+import { imageUpload } from "../utility/image_Utility";
 
 
 
 
-const Photo_hosting = "6f81d3831efbbc74472fc167375b90fb";
-
-const Photo_api = `https://api.imgbb.com/1/upload?key=${Photo_hosting}`;
 
 const AddArtical = () => {
 
-    const handelAdd = (e) => {
+    const handelAdd = async (e) => {
       e.preventDefault();
-      console.log(e.currentTarget);
+
       const form = new FormData(e.currentTarget);
 
       const title = form.get("title");
@@ -26,21 +24,28 @@ const AddArtical = () => {
       const description = form.get("description");
       const publisher = form.get("publisher");
       const tag = form.get("tag");
-    
 
+      const imageData = await imageUpload(photo);
 
-      const newService = {
-    title,photo,description,publisher,tag
+      const image = imageData.data.display_url;
+      console.log(image);
+
+      const artical = {
+        title,
+        image,
+        description,
+        publisher,
+        tag,
       };
 
-      console.log(newService);
+      console.log(artical);
 
-      fetch("https://skill-iota.vercel.app", {
+      fetch("http://localhost:5001/news", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newService),
+        body: JSON.stringify(artical),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -66,7 +71,7 @@ const AddArtical = () => {
 
     return (
       <div>
-        <Navbar></Navbar>
+
         <div>
           <form onSubmit={handelAdd}>
             <section className="bg-white dark:bg-gray-900">

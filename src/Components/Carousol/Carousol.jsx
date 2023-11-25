@@ -35,8 +35,8 @@ const Carousol = () => {
           <img src="https://i.ibb.co/pbz3J0B/laura-wolvaardt.jpg" alt="" />
           <span className=" text-lg font-bold">
             {" "}
-            Ahead of Bangladesh's tour of South Africa, the CSA (Cricket South
-            Africa) has announced opener Laura Wolvaardt's as captain of all
+            Ahead of Bangladesh's tour of South Africa, the CSA Cricket South
+            Africa has announced opener Laura Wolvaardt's as captain of all
             three formats.
           </span>
         </SwiperSlide>

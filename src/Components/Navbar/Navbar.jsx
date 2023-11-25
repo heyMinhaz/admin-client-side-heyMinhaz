@@ -45,22 +45,22 @@ const handelSingout = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
-                  <a>Home</a>
-                </li>
-                <li>
+               <Link to="/">  <li>
+                 <a>Home</a>
+                </li></Link> 
+                <Link to="/artical">      <li>
                   <a>Add Articles</a>
-                </li>
-                <li>
+                </li></Link>
+                     <Link to="/artical"> <li>
                   <a>All Articles</a>
-                </li>
+                </li></Link> 
                 <li>
                   <a>Subscription</a>
                 </li>
                 {user ? (
-                  <li>
+                  <Link to="dashboard">    <li>
                     <a>Dashboard</a>
-                  </li>
+                  </li></Link>
                 ) : (
                   <div></div>
                 )}
@@ -82,7 +82,7 @@ const handelSingout = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link to='/'>
+                <Link to="/">
                   {" "}
                   <a>Home</a>
                 </Link>
@@ -94,11 +94,14 @@ const handelSingout = () => {
                 </Link>
               </li>
               <li>
-                <a>All Articles</a>
+                <Link to='allartical'>
+                  {" "}
+                  <a>All Articles</a>
+                </Link>
               </li>
-              <li>
+           <Link to='/subcription' >  <li>
                 <a>Subscription</a>
-              </li>
+              </li></Link> 
               {user ? (
                 <li>
                   <Link to="dashboard">

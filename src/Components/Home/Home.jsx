@@ -1,19 +1,23 @@
+import { useLoaderData } from "react-router-dom";
 import Carousol from "../Carousol/Carousol";
-import Navbar from "../Navbar/Navbar";
+
 import Plan from "../Plan/Plan";
 import Statistics from "../Statistic/Statistics";
 
 
 const Home = () => {
+       const result = useLoaderData();
+       console.log(result);
+  
     return (
+      <div>
         <div>
-            <Navbar></Navbar>
-            <Carousol></Carousol>
-
-
-            <Plan></Plan>
-            <Statistics></Statistics>
+  
         </div>
+<Carousol></Carousol>
+        <Plan></Plan>
+        <Statistics></Statistics>
+      </div>
     );
 };
 
