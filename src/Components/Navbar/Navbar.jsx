@@ -45,28 +45,42 @@ const handelSingout = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-               <Link to="/">  <li>
-                 <a>Home</a>
-                </li></Link> 
-                <Link to="/artical">      <li>
-                  <a>Add Articles</a>
-                </li></Link>
-                     <Link to="/artical"> <li>
-                  <a>All Articles</a>
-                </li></Link> 
+                <Link to="/">
+                  {" "}
+                  <li>
+                    <a>Home</a>
+                  </li>
+                </Link>
+                <Link to="/artical">
+                  {" "}
+                  <li>
+                    <a>Add Articles</a>
+                  </li>
+                </Link>
+                <Link to="/artical">
+                  {" "}
+                  <li>
+                    <a>All Articles</a>
+                  </li>
+                </Link>
                 <li>
                   <a>Subscription</a>
                 </li>
                 {user ? (
-                  <Link to="dashboard">    <li>
-                    <a>Dashboard</a>
-                  </li></Link>
+                  <Link to="dashboard">
+                    {" "}
+                    <li>
+                      <a>Dashboard</a>
+                    </li>
+                  </Link>
                 ) : (
                   <div></div>
                 )}
-                <li>
-                  <a>My Articles</a>
-                </li>
+                <Link to="/myartical">
+                  <li>
+                    <a>My Articles</a>
+                  </li>
+                </Link>
                 <li>
                   <a>Premium Articles </a>
                 </li>
@@ -94,14 +108,17 @@ const handelSingout = () => {
                 </Link>
               </li>
               <li>
-                <Link to='allartical'>
+                <Link to="allartical">
                   {" "}
                   <a>All Articles</a>
                 </Link>
               </li>
-           <Link to='/subcription' >  <li>
-                <a>Subscription</a>
-              </li></Link> 
+              <Link to="/subcription">
+                {" "}
+                <li>
+                  <a>Subscription</a>
+                </li>
+              </Link>
               {user ? (
                 <li>
                   <Link to="dashboard">
@@ -112,9 +129,12 @@ const handelSingout = () => {
               ) : (
                 <div></div>
               )}
-              <li>
-                <a>My Articles</a>
-              </li>
+              <Link to="/myartical">
+                {" "}
+                <li>
+                  <a>My Articles</a>
+                </li>
+              </Link>
               <li>
                 <a>Premium Articles </a>
               </li>

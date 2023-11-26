@@ -2,16 +2,19 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-undef */
 
+import { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
 
 import { imageUpload } from "../utility/image_Utility";
+import { AuthContext } from "../Authprovider/Authprovider";
+import axios from "axios";
 
 
 
 
 
 const AddArtical = () => {
-
+const { user } = useContext(AuthContext);
     const handelAdd = async (e) => {
       e.preventDefault();
 
@@ -20,6 +23,7 @@ const AddArtical = () => {
       const title = form.get("title");
 
       const photo = form.get("photo");
+      const email = form.get("email");
 
       const description = form.get("description");
       const publisher = form.get("publisher");
@@ -35,33 +39,27 @@ const AddArtical = () => {
         image,
         description,
         publisher,
-        tag,
+        tag,email
       };
 
       console.log(artical);
+axios
+  .post("http://localhost:5001/news",artical)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
 
-      fetch("http://localhost:5001/news", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(artical),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-
-          if (data.insertedId) {
-            e.target.reset();
-            // eslint-disable-next-line no-undef
-            Swal.fire({
-              title: "success",
-              text: "Service Added Succesfully",
-              icon: "success",
-              confirmButtonText: "Thank you",
-            });
-          }
-        });
+    if (data.insertedId) {
+      e.target.reset();
+      // eslint-disable-next-line no-undef
+      Swal.fire({
+        title: "success",
+        text: "Service Added Succesfully",
+        icon: "success",
+        confirmButtonText: "Thank you",
+      });
+    }
+  });
     };
 
 
@@ -120,6 +118,19 @@ const AddArtical = () => {
                           type="text"
                           name="publisher"
                           placeholder="Publisher"
+                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                      </div>
+                      <div>
+                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          defaultValue={user.email}
+                          readOnly
+                          placeholder="Email"
                           className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                       </div>

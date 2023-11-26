@@ -13,12 +13,15 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import AllArtical from './Components/AllArtical/AllArtical';
 import ArticalDetails from './Components/AllArtical/ArticalDetails';
 import Subcription from './Components/Subcription/Subcription';
+import Myartical from './Components/MyArtical/Myartical';
+import Error from '../src/Error/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -46,6 +49,11 @@ const router = createBrowserRouter([
         element: <Subcription></Subcription>,
       },
       {
+        path: "/myartical",
+        element: <Myartical></Myartical>,
+        loader: () => fetch("http://localhost:5001/news"),
+      },
+      {
         path: "/allartical",
         element: <AllArtical></AllArtical>,
         loader: () => fetch("http://localhost:5001/news"),
@@ -53,7 +61,8 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <ArticalDetails></ArticalDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5001/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5001/news/${params.id}`),
       },
     ],
   },
