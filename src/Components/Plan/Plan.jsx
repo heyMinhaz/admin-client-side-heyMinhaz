@@ -3,127 +3,225 @@
 
 const Plan = () => {
     return (
+      <div>
         <div>
-
-<div className="flex flex-col items-center justify-center min-h-screen p-10 text-gray-700  md:p-20">
-	<h2 className="text-2xl font-medium">Jedi Order Membership</h2>
-
-	
-	<div className="flex flex-wrap items-center justify-center w-full max-w-4xl mt-8 ">
-		<div className="flex flex-col flex-grow mt-8 overflow-hidden bg-white rounded-lg shadow-lg">
-			<div className="flex flex-col items-center p-10 bg-gray-200">
-				<span className="font-semibold">Padawan</span>
-				<div className="flex items-center">
-					<span className="text-3xl">$</span>
-					<span className="text-5xl font-bold">20</span>
-					<span className="text-2xl text-gray-500">/mo</span>
-				</div>
-			</div>
-			<div className="p-10">
-				<ul>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Lightsaber</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Robe</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Insurance</span>
-					</li>
-				</ul>
-			</div>
-			<div className="flex px-10 pb-10 justfy-center">
-				<button className="flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">Join now</button>
-			</div>
-		</div>
-
-	
-		<div className="z-10 flex flex-col flex-grow mt-8 overflow-hidden transform bg-white rounded-lg shadow-lg md:scale-110">
-			<div className="flex flex-col items-center p-10 bg-gray-200">
-				<span className="font-semibold">Jedi Knight</span>
-				<div className="flex items-center">
-					<span className="text-3xl">$</span>
-					<span className="text-6xl font-bold">50</span>
-					<span className="text-2xl text-gray-500">/mo</span>
-				</div>
-			</div>
-			<div className="p-10">
-				<ul>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2 italic">Padawan +</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Solo missions</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Utility belt</span>
-					</li>
-				</ul>
-			</div>
-			<div className="flex px-10 pb-10 justfy-center">
-				<button className="flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">Join now</button>
-			</div>
-		</div>
-
-
-		<div className="flex flex-col flex-grow overflow-hidden bg-white rounded-lg shadow-lg mt-19">
-			<div className="flex flex-col items-center p-10 bg-gray-200">
-				<span className="font-semibold">Jedi Master</span>
-				<div className="flex items-center">
-					<span className="text-3xl">$</span>
-					<span className="text-5xl font-bold">99</span>
-					<span className="text-2xl text-gray-500">/mo</span>
-				</div>
-			</div>
-			<div className="p-10">
-				<ul>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2 italic">Jedi Knight +</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Sit on council</span>
-					</li>
-					<li className="flex items-center">
-						<svg className="w-5 h-5 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span className="ml-2">Stock options</span>
-					</li>
-				</ul>
-			</div>
-			<div className="flex px-10 pb-10 justfy-center">
-				<button className="flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">Join now</button>
-			</div>
-		</div>
-	</div>
-
-
-</div>
+          <h1 className=" text-4xl text-center mt-10">
+            Join to our premium customer
+          </h1>
         </div>
+        <div className=" py-12  flex items-center justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+              <div className="p-1 bg-blue-200"></div>
+              <div className="p-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  Basic Plan
+                </h2>
+                <p className="text-gray-600 mb-6">Ideal for One people</p>
+                <p className="text-4xl font-bold text-gray-800 mb-6">$19.99</p>
+                <ul className="text-sm text-gray-600 mb-6">
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    10 Users
+                  </li>
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    Basic Features
+                  </li>
+                  <li className="flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    24/7 Support
+                  </li>
+                </ul>
+              </div>
+              <div className="p-4">
+                <button className="w-full bg-blue-500 text-white rounded-full px-4 py-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                  Select Plan
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+              <div className="p-1 bg-green-200"></div>
+              <div className="p-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  Pro Plan
+                </h2>
+                <p className="text-gray-600 mb-6">Perfect for couple</p>
+                <p className="text-4xl font-bold text-gray-800 mb-6">$49.99</p>
+                <ul className="text-sm text-gray-600 mb-6">
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    25 Users
+                  </li>
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    Advanced Features
+                  </li>
+                  <li className="flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    24/7 Support
+                  </li>
+                </ul>
+              </div>
+              <div className="p-4">
+                <button className="w-full bg-green-500 text-white rounded-full px-4 py-2 hover:bg-green-700 focus:outline-none focus:shadow-outline-green active:bg-green-800">
+                  Select Plan
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+              <div className="p-1 bg-purple-200"></div>
+              <div className="p-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  Enterprise Plan
+                </h2>
+                <p className="text-gray-600 mb-6">For large Family</p>
+                <p className="text-4xl font-bold text-gray-800 mb-6">$99.99</p>
+                <ul className="text-sm text-gray-600 mb-6">
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    Unlimited Users
+                  </li>
+                  <li className="mb-2 flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http
+
+://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    Premium Features
+                  </li>
+                  <li className="flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    24/7 Priority Support
+                  </li>
+                </ul>
+              </div>
+              <div className="p-4">
+                <button className="w-full bg-purple-500 text-white rounded-full px-4 py-2 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple active:bg-purple-800">
+                  Select Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
 };
 
