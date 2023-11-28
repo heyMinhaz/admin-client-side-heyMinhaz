@@ -1,9 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Carousol from "../Carousol/Carousol";
 
-
+import Plan from "../Plan/Plan";
 import Statistics from "../Statistic/Statistics";
-import Subcription from "../Subcription/Subcription";
 
 
 const Home = () => {
@@ -16,7 +15,7 @@ const Home = () => {
   
         </div>
 <Carousol></Carousol>
-        <Subcription></Subcription>
+            <Plan></Plan>
             
 <div className=" "> <Statistics></Statistics></div>
 

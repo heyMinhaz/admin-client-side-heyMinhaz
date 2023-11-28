@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 
+import { Link } from "react-router-dom";
+
 
 const Plan = () => {
     return (
@@ -74,9 +76,9 @@ const Plan = () => {
                 </ul>
               </div>
               <div className="p-4">
-                <button className="w-full bg-blue-500 text-white rounded-full px-4 py-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+           <Link to='/payment'>     <button className="w-full bg-blue-500 text-white rounded-full px-4 py-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
                   Select Plan
-                </button>
+                </button></Link>
               </div>
             </div>
 

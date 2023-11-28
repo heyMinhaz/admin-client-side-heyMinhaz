@@ -27,6 +27,7 @@ import AdminRoute from './Components/Dashboard/AdminRoute';
 import PrivateRoute from './Components/routes/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashborad';
 import Premium from './Components/PremiumArticals/Premium';
+import Payment from './Components/Payment/Payment';
 
 
 const queryClient = new QueryClient();
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/subcription",
         element: <Subcription></Subcription>,
+      },
+      {
+        path: "/payment",
+        element: <Payment></Payment>,
       },
       {
         path: "/myartical",
