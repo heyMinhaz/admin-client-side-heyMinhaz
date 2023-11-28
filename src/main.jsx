@@ -26,14 +26,13 @@ import AllUsers from './Components/Dashboard/Alluser';
 import AdminRoute from './Components/Dashboard/AdminRoute';
 import PrivateRoute from './Components/routes/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashborad';
+import Premium from './Components/PremiumArticals/Premium';
 
 
 const queryClient = new QueryClient();
 
 
 const router = createBrowserRouter([
-
-
   {
     path: "/",
     element: <MainLayout></MainLayout>,
@@ -56,7 +55,7 @@ const router = createBrowserRouter([
         path: "/artical",
         element: <AddArtical></AddArtical>,
       },
-      
+
       {
         path: "/subcription",
         element: <Subcription></Subcription>,
@@ -77,19 +76,30 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5001/news/${params.id}`),
       },
+      {
+        path: "/premiumartical",
+        element: <Premium></Premium>,
+        loader: () => fetch("http://localhost:5001/news"),
+      },
 
-
-
-{
-    path:"/dashboard",
-    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-    children:[{
-      path:"users",
-      element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
-    }]
-  }
-
-
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+        ),
+        children: [
+          {
+            path: "users",
+            element: (
+              <AdminRoute>
+                <AllUsers></AllUsers>
+              </AdminRoute>
+            ),
+          },
+        ],
+      },
     ],
   },
 ]);

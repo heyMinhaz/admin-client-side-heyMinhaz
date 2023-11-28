@@ -84,9 +84,9 @@ const handelSingout = () => {
                     <a>My Articles</a>
                   </li>
                 </Link>
-                <li>
+              <Link to="/premiumartical">   <li>
                   <a>Premium Articles </a>
-                </li>
+                </li></Link>  
               </ul>
             </div>
             <Link
@@ -143,9 +143,12 @@ const handelSingout = () => {
                 <div></div>
               )}{" "}
               {user ? (
-                <li>
-                  <a>Premium Articles </a>
-                </li>
+                <Link to="/premiumartical">
+                  {" "}
+                  <li>
+                    <a>Premium Articles </a>
+                  </li>
+                </Link>
               ) : (
                 <div></div>
               )}{" "}
