@@ -10,7 +10,10 @@ import { AuthContext } from "../Authprovider/Authprovider";
 
 
 
+
 const Navbar = () => {
+
+
 
 const { user, logOut } = useContext(AuthContext);
 
@@ -67,7 +70,7 @@ const handelSingout = () => {
                   <a>Subscription</a>
                 </li>
                 {user ? (
-                  <Link to="dashboard">
+                  <Link to="/dashboard">
                     {" "}
                     <li>
                       <a>Dashboard</a>
@@ -121,7 +124,7 @@ const handelSingout = () => {
               </Link>
               {user ? (
                 <li>
-                  <Link to="dashboard">
+                  <Link to="/dashboard">
                     {" "}
                     <a>Dashboard</a>
                   </Link>
@@ -129,15 +132,23 @@ const handelSingout = () => {
               ) : (
                 <div></div>
               )}
-              <Link to="/myartical">
-                {" "}
+              {user ? (
+                <Link to="/myartical">
+                  {" "}
+                  <li>
+                    <a>My Articles</a>
+                  </li>
+                </Link>
+              ) : (
+                <div></div>
+              )}{" "}
+              {user ? (
                 <li>
-                  <a>My Articles</a>
+                  <a>Premium Articles </a>
                 </li>
-              </Link>
-              <li>
-                <a>Premium Articles </a>
-              </li>
+              ) : (
+                <div></div>
+              )}{" "}
             </ul>
           </div>
           <label

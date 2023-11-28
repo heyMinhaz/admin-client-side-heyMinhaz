@@ -51,16 +51,43 @@ const Registration = () => {
 
     createUser(email, password)
       .then((userCredential) => {
-        handleUpdateProfile(name, photoURL).then(() => {});
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error("Registation failed,please try again!");
-        console.log(errorMessage);
-        console.log(errorCode);
-      });
-  };
+        handleUpdateProfile(name, photoURL).then(() => { });
+        
+
+
+    
+    const addData = {
+        email,name
+     
+        };
+    
+    
+    
+    
+        fetch("http://localhost:5001/users", {
+          method: "Post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(addData),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            navigate("/")
+            window.location.reload();
+            toast.success('Registation Successfully!')
+          });
+              
+          })
+          
+       
+        }
+     
+       
+
+
+        
 
   const handelPopUpRe = () => {
     signInWithPopup(auth, provider)
@@ -107,6 +134,13 @@ const Registration = () => {
           });
         }
       });
+    
+    
+
+    
+    
+    
+    
   };
 
   return (

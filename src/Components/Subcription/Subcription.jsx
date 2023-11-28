@@ -22,7 +22,7 @@ const Subcription = () => {
       </div>
       <div className="p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Basic Plan</h2>
-        <p className="text-gray-600 mb-6">Ideal for small businesses</p>
+        <p className="text-gray-600 mb-6">Ideal for One people</p>
         <p className="text-4xl font-bold text-gray-800 mb-6">$19.99</p>
         <ul className="text-sm text-gray-600 mb-6">
           <li className="mb-2 flex items-center">
@@ -65,7 +65,7 @@ const Subcription = () => {
       </div>
       <div className="p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Pro Plan</h2>
-        <p className="text-gray-600 mb-6">Perfect for growing businesses</p>
+        <p className="text-gray-600 mb-6">Perfect for couple</p>
         <p className="text-4xl font-bold text-gray-800 mb-6">$49.99</p>
         <ul className="text-sm text-gray-600 mb-6">
           <li className="mb-2 flex items-center">
@@ -107,7 +107,7 @@ const Subcription = () => {
       </div>
       <div className="p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Enterprise Plan</h2>
-        <p className="text-gray-600 mb-6">For large-scale enterprises</p>
+        <p className="text-gray-600 mb-6">For large Family</p>
         <p className="text-4xl font-bold text-gray-800 mb-6">$99.99</p>
         <ul className="text-sm text-gray-600 mb-6">
           <li className="mb-2 flex items-center">

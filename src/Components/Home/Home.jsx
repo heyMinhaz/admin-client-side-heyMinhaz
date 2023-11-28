@@ -15,8 +15,11 @@ const Home = () => {
   
         </div>
 <Carousol></Carousol>
-        <Plan></Plan>
-        <Statistics></Statistics>
+            <Plan></Plan>
+            
+<div className=" "> <Statistics></Statistics></div>
+
+       
       </div>
     );
 };
