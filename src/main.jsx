@@ -28,6 +28,9 @@ import PrivateRoute from './Components/routes/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashborad';
 import Premium from './Components/PremiumArticals/Premium';
 import Payment from './Components/Payment/Payment';
+import Done from './Components/Payment/Done';
+import Cart from '../src/Components/Cart/Cart';
+import PaymentHistory from '../src/Components/PaymentHistory/PaymentHistory';
 
 
 const queryClient = new QueryClient();
@@ -66,6 +69,10 @@ const router = createBrowserRouter([
         element: <Payment></Payment>,
       },
       {
+        path: "/done",
+        element: <Done></Done>,
+      },
+      {
         path: "/myartical",
         element: <Myartical></Myartical>,
         loader: () => fetch("http://localhost:5001/news"),
@@ -85,6 +92,18 @@ const router = createBrowserRouter([
         path: "/premiumartical",
         element: <Premium></Premium>,
         loader: () => fetch("http://localhost:5001/news"),
+      },
+      {
+        path: "cart",
+        element: <Cart></Cart>,
+      },
+      {
+        path: "payment",
+        element: <Payment></Payment>,
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
       },
 
       {
