@@ -9,7 +9,7 @@ const Mycard = ({ order }) => {
 
     return (
       <div>
-       
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img className="rounded-t-lg h-[300px]" src={image} alt="" />
