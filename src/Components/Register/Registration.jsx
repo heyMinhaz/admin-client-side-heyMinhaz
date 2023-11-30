@@ -19,6 +19,7 @@ import {
 import app from "../../FireBase/Firebase.config";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Registration = () => {
   const auth = getAuth(app);
@@ -51,35 +52,28 @@ const Registration = () => {
 
     createUser(email, password)
       .then((userCredential) => {
-        handleUpdateProfile(name, photoURL).then(() => { });
         
-
-
-    
-    const addData = {
-        email,name
-     
-        };
-    
-    
-    
-    
-        fetch("http://localhost:5001/users", {
-          method: "Post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(addData),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
+        handleUpdateProfile(name, photoURL)
+.then(()=>{
+                const userInfo = {
+                    name: name,
+                    email:email
+                }
+                axios.post("http://localhost:5001/users",userInfo)
+                .then(res => {
+                   
+                    toast.success('Registation Successfully!')
+                     
+               
+               
+                })
+               
+                
+            })
             navigate("/")
-            window.location.reload();
-            toast.success('Registation Successfully!')
-          });
-              
-          })
+
+
+      })
           
        
         }

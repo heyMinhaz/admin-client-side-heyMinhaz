@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/artical",
-        element: <AddArtical></AddArtical>,
+        element: <PrivateRoute><AddArtical></AddArtical></PrivateRoute>,
       },
 
       {

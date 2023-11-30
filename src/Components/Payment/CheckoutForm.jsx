@@ -1,15 +1,15 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import useCart from "../hooks/useCart";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const CheckoutForm = () => {
     const [error, setError] = useState('');
-    const [clientSecret, setClientSecret] = useState('')
+    const [clientSecret] = useState('')
     const [transactionId, setTransactionId] = useState('');
     const stripe = useStripe();
     const elements = useElements();
@@ -20,16 +20,7 @@ const CheckoutForm = () => {
 
     const totalPrice = cart.reduce((total, item) => total + item.price, 0)
 
-    useEffect(() => {
-        if (totalPrice > 0) {
-            axiosSecure.post('/create-payment-intent', { price: totalPrice })
-                .then(res => {
-                    console.log(res.data.clientSecret);
-                    setClientSecret(res.data.clientSecret);
-                })
-        }
-
-    }, [axiosSecure, totalPrice])
+ 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -109,7 +100,7 @@ const CheckoutForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="p-52" onSubmit={handleSubmit}>
             <CardElement
                 options={{
                     style: {
@@ -126,9 +117,9 @@ const CheckoutForm = () => {
                     },
                 }}
             />
-            <button className="btn btn-sm btn-primary my-4" type="submit" disabled={!stripe || !clientSecret}>
+          <Link to='/done'>  <button className="btn btn-sm btn-primary my-4" type="submit" >
                 Pay
-            </button>
+            </button></Link>
             <p className="text-red-600">{error}</p>
             {transactionId && <p className="text-green-600"> Your transaction id: {transactionId}</p>}
         </form>

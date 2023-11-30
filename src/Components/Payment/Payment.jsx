@@ -4,7 +4,9 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../Payment/CheckoutForm";
 
 // TODO: add publishable key
-const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
+const stripePromise = loadStripe(
+"pk_test_51OH51CCKbPrjeIaSkVxGvfoZCeqplYvlRulnJMbkmvQiXShIcKfICJqCGb3fp9AbBTbBA6jFHvZGQTRPu8AnTUW100HI9Al0UK"
+);
 const Payment = () => {
     return (
         <div>
