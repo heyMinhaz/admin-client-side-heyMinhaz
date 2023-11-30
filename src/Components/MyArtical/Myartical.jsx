@@ -25,7 +25,7 @@ console.log(ordercart);
 
 
     return (
-      <div className=" grid grid-cols-3 p-10  ">
+      <div className=" grid grid-cols-3 p-10  gap-10">
         {orders.map((order) => (
           <Mycard key={order._id} order={order}></Mycard>
         ))}
