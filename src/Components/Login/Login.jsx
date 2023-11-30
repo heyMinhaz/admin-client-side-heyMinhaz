@@ -15,7 +15,7 @@ import {
 import { AuthContext } from "../Authprovider/Authprovider";
 import Swal from "sweetalert2";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-
+import app from "../../FireBase/Firebase.config";
 
 const Login = () => {
   const auth = getAuth(app);
@@ -23,7 +23,7 @@ const Login = () => {
 
   const { singIn } = useContext(AuthContext);
 
-  const location = useLocation();
+
 
   const from = "/";
 
