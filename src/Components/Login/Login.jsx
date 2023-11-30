@@ -23,7 +23,7 @@ const Login = () => {
 
   const { singIn } = useContext(AuthContext);
 
-
+  const location = useLocation();
 
   const from = "/";
 
